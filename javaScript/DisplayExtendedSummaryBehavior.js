@@ -146,6 +146,8 @@ var newContentFadeTimer = 0;
 var newWindowTransitonTimer = 0;
 //
 var totalOpeningTimer = 0;
+//
+var openHeight = 0;
 
 //
 var oldContentFadeTimer = 0;
@@ -153,6 +155,54 @@ var oldContentFadeTimer = 0;
 var oldWindowTransitonTimer = 0;
 //
 var totalClosingTimer = 0;
+//
+var closingHeight = 0;
+
+//
+function WindowDisplayHeight (_new, _display)
+{
+    upperScreenLimit = 470;
+    midScreenLimit = upperScreenLimit - 50;
+    minimalScreenLimit = upperScreenLimit - 100;
+
+    if(_new)
+    {
+	openHeight = 0;
+	console.log ("Open height is = " + openHeight);
+    }
+
+    else if(!_new)
+    {
+	closingHeight = 0;
+	console.log ("Closing height is = " + closingHeight);
+    }
+
+
+
+    currentScreenWidth = screen.width;
+
+    if(currentScreenWidth > upperScreenLimit)
+    {
+	return _display.displayOpenHeight;
+    }
+
+    else if(currentScreenWidth < upperScreenLimit && currentScreenWidth >= midScreenLimit)
+    {
+	return _display.displayOpenHeight += 20;
+    }
+
+    else if(currentScreenWidth < midScreenLimit && currentScreenWidth >= minimalScreenLimit)
+    {
+	newHeight = _display.displayOpenHeight + 48;
+	console.log ("Set height is = " + newHeight);
+	return newHeight;
+    }
+
+    else if(currentScreenWidth < minimalScreenLimit)
+    {
+	console.log ("This scaling is not available! Larger screen size is required!!!!");
+    }
+}
 
 //
 function InitiateEffectTimers (_new, _firstStage)
@@ -164,17 +214,18 @@ function InitiateEffectTimers (_new, _firstStage)
             // Open display window
             if(_firstStage)
             {
+		openHeight = WindowDisplayHeight (true, _newDisplayWindow);
                 newWindowTransitonTimer = _windowTransitonTime;
                 totalOpeningTimer = _contentFadeTime + newWindowTransitonTimer;
-		        console.log ("New window transition timer = " + newWindowTransitonTimer +
-		        ", and Total opening timer = " +  totalOpeningTimer);
+		        //console.log ("New window transition timer = " + newWindowTransitonTimer +
+		        //", and Total opening timer = " +  totalOpeningTimer);
             }
 
             // Fade content in
             else if(!_firstStage)
             {
                 newContentFadeTimer = _contentFadeTime;
-		        console.log ("New content fade timer = " + newContentFadeTimer);
+		        //console.log ("New content fade timer = " + newContentFadeTimer);
             }
         }
     }
@@ -188,15 +239,16 @@ function InitiateEffectTimers (_new, _firstStage)
             {
                 oldContentFadeTimer = _contentFadeTime;
                 totalClosingTimer = _contentFadeTime + _windowTransitonTime;
-		        console.log ("Old content fade timer = " + oldContentFadeTimer +
-		        ", and Total closing timer = " +  totalClosingTimer);
+		        //console.log ("Old content fade timer = " + oldContentFadeTimer +
+		        //", and Total closing timer = " +  totalClosingTimer);
             }
 
             // Close display window
             else if(!_firstStage)
             {
+		closingHeight = WindowDisplayHeight (false, _oldDisplayWindow);
                 oldWindowTransitonTimer = _windowTransitonTime;
-		        console.log ("Old window transition timer = " + oldWindowTransitonTimer);
+		        //console.log ("Old window transition timer = " + oldWindowTransitonTimer);
             }
         }
     }
@@ -219,16 +271,16 @@ function ChangeDisplayExtendedWindowStatus ()
             percentageOfTransition = 1-(newWindowTransitonTimer / _windowTransitonTime);
             //console.log("Current transition in percentage = " + percentageOfTransition + "%");
 
-            newDisplayHeight = _newDisplayWindow.displayOpenHeight * percentageOfTransition;
+            newDisplayHeight = openHeight * percentageOfTransition;
 
             if(newDisplayHeight < 0)
             {
                 newDisplayHeight = 0;
             }
 
-            else if(newDisplayHeight > _newDisplayWindow.displayOpenHeight)
+            else if(newDisplayHeight > openHeight)
             {
-                newDisplayHeight = _newDisplayWindow.displayOpenHeight;
+                newDisplayHeight = openHeight;
             }
 
             currTopDisplayHeight = String(newDisplayHeight) + "px";
@@ -292,16 +344,16 @@ function ChangeDisplayExtendedWindowStatus ()
                 percentageOfTransition = oldWindowTransitonTimer / _windowTransitonTime;
                 //console.log("Current transition percentage = " + String(percentageOfTransition) + "%");
         
-                newDisplayHeight = _oldDisplayWindow.displayOpenHeight * percentageOfTransition;
+                newDisplayHeight = closingHeight * percentageOfTransition;
         
                 if(newDisplayHeight < 0)
                 {
                     newDisplayHeight = 0;
                 }
         
-                else if(newDisplayHeight > _oldDisplayWindow.displayOpenHeight)
+                else if(newDisplayHeight > closingHeight)
                 {
-                    newDisplayHeight = _oldDisplayWindow.displayOpenHeight;
+                    newDisplayHeight = closingHeight;
                 }
         
                 currTopDisplayHeight = String(newDisplayHeight) + "px";
