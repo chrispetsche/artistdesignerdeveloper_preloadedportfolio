@@ -188,7 +188,9 @@ function WindowDisplayHeight (_new, _display)
 
     else if(currentScreenWidth < upperScreenLimit && currentScreenWidth >= midScreenLimit)
     {
-	return _display.displayOpenHeight += 20;
+	newHeight = _display.displayOpenHeight + 24;
+	console.log ("Set height is = " + newHeight);
+	return newHeight;
     }
 
     else if(currentScreenWidth < midScreenLimit && currentScreenWidth >= minimalScreenLimit)
