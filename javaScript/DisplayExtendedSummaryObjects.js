@@ -1,34 +1,41 @@
 // Author: Chris Petsche
 // Experience Designer and Developer Portfolio
 // DisplayExtendedSummaryObjects.js
-// Version: 1.0
-// Updated: 11 Nov 2019
+// Version: 2.4.2
+// Updated: 16 Nov 2019
 
 // This script handles all the objects containing the display information for the 
-// display extended summaries. Since each one will be unique, a less uniform method
-// of opening and closing the displays is needed. Each object will be named for the 
-// display it's responsible for and then matched via the ID sent in through the
+// display extended summaries. Since each one will be unique in size, and the design
+// is to only ever have one extention open at a time, this script holds the unique 
+// bits of information to make them open to the proper size, as well as close if the
+// viewer wishes to open another summary elsewhere. Each object will be named for the 
+// display it's responsible for, and then linked via the ID sent in through the
 // DisplayExtendedSummaryBehavior.js script. 
-
-// Though this is the first version, there shouldn't be many after as this is a fairly
-// straight forward set up and the only changes will probably be what variables the
-// individual objects contain and their values.
 
 // Basic concept goes:
 //  - When the DisplayExtendedSummaryBehavior.js calls in with an ID, it gets passed
 //  through a switch statement. 
 //      - If there is an ID that matches, set the object associated with ID as the
-//      display object needed for either the opening or closing operations of the
+//      html display object needed for either the opening or closing operations of the
 //      behavior script.
-//
-//  - All other functions between the ID/Object matching and the actual objects are
-//  soley for the setting of the object variables.
+//          - The script uses the 3 properties available in each object: contentToFade
+//          and windowToTransition to set the ID's of the html elements to adjust, as
+//          well as the displayOpenHeight to know how large the specific summary window
+//          needs to be to show the display content. 
+
+// After several test cases and design refinements, the properties of the objects of the 
+// basic displays was narrowed quite a bit. Part of the testing revealed that the content
+// fade time and the window transition time could be consistant across all objects. In more
+// than one way, this should have been the original design. But, discovering what variables 
+// are needed and where they are the most efficient are steps in the development of any 
+// system design.
+// This will be the amount of time set to fade the extended summary display content in or out.
+const _contentFadeTime = 0.3;
+// This will be the amount of time set to transition the display window open or closed.
+const _windowTransitonTime = 0.5;
 
 // !!****** Display Extended Summary System: Object Selection Section ******!! //
 
-const _contentFadeTime = 0.3;
-
-const _windowTransitonTime = 0.5;
 
 // This will be the variable temporarily used to set the object the display will use
 // to filter in the proper operation variables to open and close each different display.
@@ -37,7 +44,7 @@ var displayExtendedSummaryObject;
 // As described above, the system will use a function to pass in a specific ID to be matched.
 function DisplayExtentedSummaryToTransition (_extSumId)
 {
-    // The ID is run through the following switch statement to find the appropriate object
+    // The ID is ran through the following switch statement to find the appropriate object
     // preloaded with the information the extended summary behavior script needs.
     switch (_extSumId)
     {
@@ -104,7 +111,7 @@ var extSummary1 = {
     // Like the content, the window to transition is the html ID used to shrink and expand
     // the desired extended summary window.
     windowToTransition : "sectionDisplayExtendedWindow_Experiences_Project1",
-    // This is the height of the window when fully open.
+    // This is the height of the window when fully open on screens larger than 470 pixels.
     displayOpenHeight : 110,
 };
 
