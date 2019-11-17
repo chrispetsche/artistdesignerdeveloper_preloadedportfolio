@@ -22,7 +22,7 @@
 
 // !!****** Nav Button Display Behavior System: Main Ops Section ******!! //
 // In this section the viewer input is taken in, the main ops variables are set, and the
-// functions of the system are updated via the SiteClockWork.js script.
+// functions of the system are updated via the SiteClockWorks.js script.
 
 // Since the entire system is called on a 1/100th second cycle, any timers running
 // within it need to be incremented at the same rate in order to keep everything

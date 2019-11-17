@@ -1,8 +1,8 @@
 // Author: Chris Petsche
 // Experience Designer and Developer Portfolio
 // DisplayExtendedSummaryBehavior.js
-// Version: 1.0
-// Updated: 11 Nov 2019 
+// Version: 3.7.8
+// Updated: 16 Nov 2019 
 
 // The opening and closing of each display extended summary is ran through this script.
 // After designing and coding the NavButtonDisplayBehavior.js, the idea came to use the
