@@ -1,13 +1,14 @@
 <!-- Author: Chris Petsche
      Site: Artist Designer and Developer Portfolio
-     Page: index.html (experiencePreview page)
-     Version: 5.5.2
-     Updated: 18 Nov 2019
+     Page: bio.html
+     Version: 5.6.2
+     Updated: 22 Nov 2019
 
-     This page will be one of a handful of design and development preview pages. Its purpose is to give a small but detailed
-     description for specific types of projects. Aside from the general site content (header, footer, background), these pages
-     will contain mulitple display windows going down the length of the page that, holding: text, video and images to give an
-     informative summary about the project within, as well as a button linked to the full project description.
+     This page links the professional side of my personality to the less 
+     professional aspects that make me, me! Here the viewer can get to 
+     know me from the inside out to get a better understanding of my
+     thought processes, methods of solving problems, and how both of these 
+     came to be with a few small pieces of history. 
 -->
 <!DOCTYPE html>
 
@@ -55,12 +56,10 @@
                 and then a style sheet for the type of page or even the specific page, like the resume or bio
                 pages. Some many even contain more sheets depending on the needs of the page.  -->
 
-
-
     <!-- Every page in direct relation to the portfolio site will have this style sheet attached. -->
     <link rel="stylesheet" href="css/basicSiteStyles.css">
     <!-- All portfolio preview pages have this style sheet attached. -->
-    <link rel="stylesheet" href="css/previewPageStyles.css">
+    <link rel="stylesheet" href="css/bioPageStyles.css">
     
     <!-- Link allowing the site to pull the desired fonts from Googles API system for both style and 
     greater probability that they will work the same on all devices and browsers. -->
@@ -135,7 +134,7 @@ above this pages closing 'body' tag. -->
                 should stick with my name. So, its Z-index is 148. And like the 
                 name above, because of the elements importance, it will be the 
                 only one with an h3 tag! -->
-                <h3>Experience <br> Designer and Developer</h3>
+                <h3>Artist <br> Designer and Developer</h3>
 
                 <!-- The image surrounding the title of the page will take Z-index 146 so that it sits
                 just below the title per its design, but so that it also never interfers with the site
@@ -171,7 +170,7 @@ above this pages closing 'body' tag. -->
                 site related pages. The one here in the header contains navigation buttons for the various
                 skills preview pages that display the different type of work I am capable of doing. -->
 
-        <!-- Holds and handles content for the navigation buttons within the page header display container.
+         <!-- Holds and handles content for the navigation buttons within the page header display container.
         It has a class for styling, and an ID for the opening and closing behavior of the button display. -->
         <div class="previewPageNavButtonContainer" id="previewPageNavButtonDisplay">
             
@@ -189,7 +188,7 @@ above this pages closing 'body' tag. -->
             <a class="basicSiteBtn_Theme wideBtn navButton_Header" href= "environmentsPreview.html">ENVIRONMENT</a>
             <!-- Skills navigation button 7 is greyed out with no page link because this is the current page
             the viewer is observing. -->
-            <a class="basicSiteBtn_Greyed wideBtn navButton_Header">EXPERIENCES</a>
+            <a class="basicSiteBtn_Theme wideBtn navButton_Header" href= "index.html">EXPERIENCES</a>
 
         </div>
         
@@ -227,127 +226,73 @@ above this pages closing 'body' tag. -->
 
     <!-- Vertical block that holds the bulk of the 
     content for each page. -->
-    <div class="primaryContentBlock">
+    <div class="primaryContentBlock" id="bioPrimaryContainer">
 
-        <!-- Each of the preview pages will have a brief introduction.
-        This container will hold those briefings. -->
-        <div class="briefIntroContainer introDisplay">
+        <!-- Typical site content block that runs
+	    horizontally down the page. -->
+        <div class="basicContentBlock">
+            
+            <!-- Basic container that holds portions of
+	        content within the content block. -->
+            <div class="basicContentContainer">
 
-            <!-- This is the text for the brief intro at the 
-            beginning of the project preview pages. -->
-            <p class="pageIntroText">
-                Games are so much more than a way of having fun, as virtual reality is so much more than a means of playing games. 
-                They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                the sum of our unique experiences broken down and described by the type of interactions that take place within each
-                individual experience.
-            </p>
+                <!-- Main biography picture at the
+		        top of the bio page. -->
+                <img class="bioPicture" src="MFAGradPic.PNG" alt="MFAGradPic">
 
-        </div>
+                <!-- Container that holds a block of
+		        bio specific text. -->
+                <div class="bioText">
 
-        <!-- Vertical block holding the section title text for 
-        the page, a band of color and an image that wraps around 
-        the text!! -->
-        <div class="sectionTitleContainer">
-
-	        <!-- An h5 header tag to display what the context of the page is. -->
-            <h5 class="sectionTitle">Experience Project Previews</h5>
-
-            <!-- The background image for the section title will be placed here. -->
-
-
-        </div>
-
-                <!-- ************************************************************************************ -->
-                                        <!-- ****** PROJECT DISPLAYS ****** -->
-                <!-- ************************************************************************************ -->
-                <!-- For the project preview pages, the primary content will be summaries of all my work 
-                based on the type of work the page is dedicated to. Each summary is built from a display
-                block, a display container, and extened display container. -->
-
-        <!-- Horizontal block to stage the location of the 
-        project preview displays going down the page. -->
-        <div class="previewDisplayBlock">
-
-            <!-- Display container that holds the intial content viewers will see
-            about the project being shown. -->
-            <div class="previewDisplayContainer">
-
-                 <!-- Block that holds the project title information. -->
-                 <div class="previewDisplayTitleContainer">
-                     <!-- The actual title of the project is displayed here. -->
-                    <p class="previewDisplayTitle">PROJECT 1</p>
-                </div>
-
-                <!-- Container that holds the primary summary for this project preview 
-                display. A piece of imagery, a small text description, and a button 
-                linked to the full project page if the viewer wishes to see it. At the 
-                bottom of the display is a toggle button for opening and closing the 
-                extended display that goes along with the primary content shown. -->
-                <div class="previewDisplayDetailsContainer">
-
-                    <!-- Here a video or an image slideshow will be displayed. -->
-                    <iframe class="previewDisplayVideoA" src="https://www.youtube.com/embed/2n6P4i6BMM0?&autoplay=1&loop=1&playlist=2n6P4i6BMM0&amp;showinfo=0&controls=0&mute=1" 
-                        frameborder="0" allow=" gyroscope; picture-in-picture"></iframe>
-
-                    <!-- This is the text description of the project being displayed. -->
-                    <p class="previewDisplayBasicDescriptionText basicSiteText">Games are so much more than a way of having fun, as virtual reality is so much more 
-                        than a means of playing games. They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                        the sum of our unique experiences broken down and 
-                    </p>
-
-                    <!-- This is the container that will give the project preview its
-                    placement within the display container. -->
-                    <div class="previewDisplayButtonContainer">
-                        <!-- This is the button that will take the viewer to the full project
-                        page associated with the preview. -->
-                        <a class="basicSiteBtn_Theme" href= "experienceDesigner_ProjectPageTemplate.html">VIEW PROJECT</a>
+                    <!-- A piece of basic site text, but
+                    has a slight tweak as it is a personal
+                    note describing a part of how my mental
+                    drive was shaped. -->
+                    <div class="basicSiteText" id="biopersonalGameHistoryNote">
+                        In my childhood, whenever my kid sister or I were having trouble with our school work, our grandmother would always tell us,
+                        <em>&quot;Make it into a game! Find the pieces that interest you. Start playing with them. Before you know it, you&apos;re 
+                        having fun finding out how they all fit together. But more importantly, you&apos;re learning!&quot;</em>
                     </div>
 
-                </div>
+                    <!-- Breaking line between personal
+		            note and main text body. -->
+                    <hr>
 
-                <!-- Here the toggle button for the extended display
-                is placed at the base of the display container. -->
-                <div class="previewExtentedDisplayToggleBlock">
+                    <br>
 
-                    <!-- Container that holds the toggle button and 
-                    arrow image that overlays it. -->
-                    <div>
+                    <!-- Main body text. -->
+                    <div class="basicSiteText">
+                        As a self titled Experience Designer and Developer, I&apos;ve chosen to see and do things with VR from a different 
+                        perspective. Games, movies, concerts, a majestic view from atop a mountain peak, and even those stagnant moments of having 
+                        to be at work are all different ways of experiencing our individual realities. Doesn&apos;t matter if those realities are 
+                        of the virtual or the real-real, each come with varying forms of interaction. 
+                    </div>
 
-                        <!-- The arrow image that will overlay the
-                        toggle button below. -->
+                    <br>
 
-                        <!-- This is the actual toggle button that opens and closes the extended 
-                        summary displays by calling the DisplayExtendedSummaryBehavior.js and
-                        sending in an ID to identify which extended display to open or close.-->
-                        <button class="previewExtentedDisplayContainerToggle" onclick="ToggleDisplayExtendedSummaryWindow ('Project1')"></button>
-                    
+                    <div class="basicSiteText">
+                        This choice of seeing and doing is a personal belief system. As we know by looking all across nature, and as grandma still 
+                        points out, games are so much more than a way of having fun. They can provide a positive means of installing an endless list 
+                        of things we may need throughout our lives, and a way of honing the installed traits and skills as well as preexisting ones.  
+                    </div>
+
+                    <br>
+
+                    <div class="basicSiteText">
+                        This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is 
+                        still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a 
+                        rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough,
+                        This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is 
+                        still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a rough, This is still a
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- The extended display block that goes with each of the project previews.
-            This will be the element that opens and closes. -->
-            <div class= "previewSectionDisplayExtendedContainer" id= "sectionDisplayExtendedWindow_Experiences_Project1">
+        </div>   
 
-                <!-- This is that container that holds all the content that will fade in and out
-                as the extended display window opens and closes. -->
-                <div class= "previewSectionDisplayExtendedContent" id= "sectionDisplayExtendedContent_Experiences_Project1">
-
-                    <!-- As a piece of the extended project summary, 
-                    this will be the text based description. -->
-                    <p class="previewDisplayBasicDescriptionText basicSiteText">Games are so much more than a way of having fun, as virtual reality is so much more 
-                        than a means of playing games. They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                        the sum of our unique experiences broken down and 
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
+    </div>
 
 
 
@@ -367,7 +312,7 @@ above this pages closing 'body' tag. -->
 
     <!-- Container holds all content that will be 
     fixed to the bottom of all related pages!! -->
-    <footer>
+    <footer class="footerContainer">
 
                 <!-- ************************************************************************************ -->
                                         <!-- ****** NAV BUTTON DISPLAY ****** -->
@@ -411,7 +356,7 @@ above this pages closing 'body' tag. -->
             <!-- Pro-doc navigation button 1 will take the viewer to the resume page. -->
             <a class="basicSiteBtn_Theme smallBtn navButton_Footer" href= "resume.html">RESUME</a>
             <!-- Pro-doc navigation button 2 will take the viewer to the biography page. -->
-            <a class="basicSiteBtn_Theme navButton_Footer" href= "bio.html">BIO</a>
+            <a class="basicSiteBtn_Greyed navButton_Footer">BIO</a>
             <!-- Pro-doc navigation button 3 will take the viewer to the contact page found on the old wix site. This will
             open the page in a new browser window for the viewer. -->
             <a class="basicSiteBtn_Theme smallBtn navButton_Footer" href= "https://chrispetsche.wixsite.com/chrispetsche/contact" target="_blank">CONTACT</a>

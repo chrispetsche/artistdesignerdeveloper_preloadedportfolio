@@ -1,8 +1,8 @@
 // Author: Chris Petsche
-// Experience Designer and Developer Portfolio
+// Artist Designer and Developer Portfolio
 // DisplayExtendedSummaryObjects.js
-// Version: 2.4.2
-// Updated: 16 Nov 2019
+// Version: 2.4.3
+// Updated: 24 Nov 2019
 
 // This script handles all the objects containing the display information for the 
 // display extended summaries. Since each one will be unique in size, and the design

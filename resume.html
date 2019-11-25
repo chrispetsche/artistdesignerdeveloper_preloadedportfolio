@@ -1,7 +1,7 @@
-<!-- Author: Chris Petsche
+﻿<!-- Author: Chris Petsche
      Site: Artist Designer and Developer Portfolio
-     Page: index.html (experiencePreview page)
-     Version: 5.5.2
+     Page: resume.html
+     Version: 5.6.2
      Updated: 18 Nov 2019
 
      This page will be one of a handful of design and development preview pages. Its purpose is to give a small but detailed
@@ -55,12 +55,11 @@
                 and then a style sheet for the type of page or even the specific page, like the resume or bio
                 pages. Some many even contain more sheets depending on the needs of the page.  -->
 
-
+    <!-- !!!!!! WILL BE DELETED AFTER CODE CLEAN UP !!!!!!!! -->
+    <link rel="stylesheet" href="css/resumePageStyles.css">
 
     <!-- Every page in direct relation to the portfolio site will have this style sheet attached. -->
     <link rel="stylesheet" href="css/basicSiteStyles.css">
-    <!-- All portfolio preview pages have this style sheet attached. -->
-    <link rel="stylesheet" href="css/previewPageStyles.css">
     
     <!-- Link allowing the site to pull the desired fonts from Googles API system for both style and 
     greater probability that they will work the same on all devices and browsers. -->
@@ -111,7 +110,7 @@ above this pages closing 'body' tag. -->
 
      <!-- Container holds all content that will be 
     fixed to the top of all related pages!! -->
-    <header>
+    <header class="headerContainer">
 
         <!-- This content will sit just above the Header containment 
         block as the 3 most important elements a viewer must see rest 
@@ -135,7 +134,7 @@ above this pages closing 'body' tag. -->
                 should stick with my name. So, its Z-index is 148. And like the 
                 name above, because of the elements importance, it will be the 
                 only one with an h3 tag! -->
-                <h3>Experience <br> Designer and Developer</h3>
+                <h3>Artist <br> Designer and Developer</h3>
 
                 <!-- The image surrounding the title of the page will take Z-index 146 so that it sits
                 just below the title per its design, but so that it also never interfers with the site
@@ -189,7 +188,7 @@ above this pages closing 'body' tag. -->
             <a class="basicSiteBtn_Theme wideBtn navButton_Header" href= "environmentsPreview.html">ENVIRONMENT</a>
             <!-- Skills navigation button 7 is greyed out with no page link because this is the current page
             the viewer is observing. -->
-            <a class="basicSiteBtn_Greyed wideBtn navButton_Header">EXPERIENCES</a>
+            <a class="basicSiteBtn_Theme wideBtn navButton_Header" href= "index.html">EXPERIENCES</a>
 
         </div>
         
@@ -228,98 +227,197 @@ above this pages closing 'body' tag. -->
     <!-- Vertical block that holds the bulk of the 
     content for each page. -->
     <div class="primaryContentBlock">
+        
+        <!-- As the resume is broken up into sections, each will have a section title. -->
+        <div class="sectionTitleContainer" id="resumeCareerObjectiveSectionTitle">
 
-        <!-- Each of the preview pages will have a brief introduction.
-        This container will hold those briefings. -->
-        <div class="briefIntroContainer introDisplay">
-
-            <!-- This is the text for the brief intro at the 
-            beginning of the project preview pages. -->
-            <p class="pageIntroText">
-                Games are so much more than a way of having fun, as virtual reality is so much more than a means of playing games. 
-                They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                the sum of our unique experiences broken down and described by the type of interactions that take place within each
-                individual experience.
-            </p>
-
+            <h5 class="sectionTitle">CAREER OBJECTIVE</h5>
+            
         </div>
 
-        <!-- Vertical block holding the section title text for 
-        the page, a band of color and an image that wraps around 
-        the text!! -->
+        <!-- In each section will be a block of basic content. -->
+        <div class="basicContentBlock">
+
+            <!-- As well as a container for each section 
+            to hold the basic content. -->
+            <div class="basicContentContainer introDisplay">
+
+                <!-- The basic content in this container is the intro to the resume.
+                Or as the section title states, the career objectives summary. -->
+                <p class="pageIntroText resumeDetailContainer" id="resumePageIntro">
+                    Imaginative, self driven and focused college graduate seeking a career in system and 
+                    environment design, while being committed to the expansion and development of all fields 
+                    in and relating to the realm of virtual reality. 
+                </p>
+
+            </div>
+
+        </div>
+        
         <div class="sectionTitleContainer">
-
-	        <!-- An h5 header tag to display what the context of the page is. -->
-            <h5 class="sectionTitle">Experience Project Previews</h5>
-
-            <!-- The background image for the section title will be placed here. -->
-
-
+            <h5 class="sectionTitle">RELEVANT SKILLS</h5>
         </div>
 
-                <!-- ************************************************************************************ -->
-                                        <!-- ****** PROJECT DISPLAYS ****** -->
-                <!-- ************************************************************************************ -->
-                <!-- For the project preview pages, the primary content will be summaries of all my work 
-                based on the type of work the page is dedicated to. Each summary is built from a display
-                block, a display container, and extened display container. -->
+        <div class="basicContentBlock">
+            
+            <div class="basicContentContainer">
+                
+                <!-- Within each basic content container there is a
+                sub container that handles the basic overrides for
+                the resume details. -->
+                <div class="resumeDetailContainer">
 
-        <!-- Horizontal block to stage the location of the 
-        project preview displays going down the page. -->
-        <div class="previewDisplayBlock">
+                    <!-- The standard structure for staging a list of items in 
+                    general html. This list will handle my professional skills. -->
+                    <ul class="relevantSkillsList basicSiteText">
 
-            <!-- Display container that holds the intial content viewers will see
-            about the project being shown. -->
-            <div class="previewDisplayContainer">
+                        <!-- Each item in the lists below layout all my skills in the areas of
+                        art, design and development. The skill types will be bolded, and then
+                        the applicable skills for the type are to the right and seperated by a
+                        vertical bar that is also bolded. -->
+                        <li> <span class="siteStdBoldedText resumeTitling">Coding Languages:</span> <span>C# <span class="siteStdBoldedText">|</span> HTML5 <span class="siteStdBoldedText">|</span> CSS3 <span class="siteStdBoldedText">|</span> JavaScript <span class="siteStdBoldedText">|</span> C++ <span class="siteStdBoldedText">|</span> Python </span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Design Areas:</span> <span>Experiences <span class="siteStdBoldedText">|</span> System <span class="siteStdBoldedText">|</span> Environment <span class="siteStdBoldedText">|</span> Story <span class="siteStdBoldedText">|</span> Level</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">VR Systems:</span> <span>Oculus Rift <span class="siteStdBoldedText">|</span> HTC Vive</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Modeling Software:</span> <span>Maya <span class="siteStdBoldedText">|</span> 3DS Max</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Game Engines:</span> <span>Unity <span class="siteStdBoldedText">|</span> Unreal</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Image Editors:</span> <span">Photoshop <span class="siteStdBoldedText">|</span> Illustrator <span class="siteStdBoldedText">|</span> After Effects</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Online Repositories:</span> <span> Github <span class="siteStdBoldedText">|</span> Google Drive</span> </li>
+                        <li> <span class="siteStdBoldedText resumeTitling">Design Documentation:</span> <span> Google Dev Tools <span class="siteStdBoldedText">|</span> Microsoft Office</span> </li>
+                    
+                    </ul>
 
-                 <!-- Block that holds the project title information. -->
-                 <div class="previewDisplayTitleContainer">
-                     <!-- The actual title of the project is displayed here. -->
-                    <p class="previewDisplayTitle">PROJECT 1</p>
                 </div>
 
-                <!-- Container that holds the primary summary for this project preview 
-                display. A piece of imagery, a small text description, and a button 
-                linked to the full project page if the viewer wishes to see it. At the 
-                bottom of the display is a toggle button for opening and closing the 
-                extended display that goes along with the primary content shown. -->
-                <div class="previewDisplayDetailsContainer">
+            </div>
 
-                    <!-- Here a video or an image slideshow will be displayed. -->
-                    <iframe class="previewDisplayVideoA" src="https://www.youtube.com/embed/2n6P4i6BMM0?&autoplay=1&loop=1&playlist=2n6P4i6BMM0&amp;showinfo=0&controls=0&mute=1" 
-                        frameborder="0" allow=" gyroscope; picture-in-picture"></iframe>
+        </div>
 
-                    <!-- This is the text description of the project being displayed. -->
-                    <p class="previewDisplayBasicDescriptionText basicSiteText">Games are so much more than a way of having fun, as virtual reality is so much more 
-                        than a means of playing games. They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                        the sum of our unique experiences broken down and 
-                    </p>
+        <div class="sectionTitleContainer">
+            <h5 class="sectionTitle">EXPERIENCE</h5>
+        </div>
+        
+        <div class="basicContentBlock">
 
-                    <!-- This is the container that will give the project preview its
-                    placement within the display container. -->
-                    <div class="previewDisplayButtonContainer">
-                        <!-- This is the button that will take the viewer to the full project
-                        page associated with the preview. -->
-                        <a class="basicSiteBtn_Theme" href= "experienceDesigner_ProjectPageTemplate.html">VIEW PROJECT</a>
+            <div class="basicContentContainer">
+
+                <!-- In this section things will be specific to the experience portion of the resume. -->
+                <div class="resumeDetailContainer" id="resumeExperienceDetails">
+
+                    <!-- In the sub container of the resume details is a sub-sub container
+                    to hold blocks of content describing different experiences in a specific
+                    format. -->
+                    <div class="experienceTextContainer basicSiteText">
+                        
+                        <!-- Each experience block will have a title enclosed
+                        in a designed horizonal ruler. -->
+                        <hr class="experienceTitleBar">
+
+                        <!-- This will be the title for the individual experiences. -->
+                        <div class="experienceText experienceTitle siteStdBoldedText"> Lucky Strike San Francisco - Virtual Tour (present): </div>
+                        
+                        <hr class="experienceTitleBar">
+
+                        <!-- Brief description of the experience. -->
+                        <div class="experienceText"> A two part personal project involving remodeling suggestions for the San Francisco Lucky Strike 
+                            venue, as well as a semi interactive experience touring the venue to possible clients. </div>
+                            
+                        <!-- The first line of the experience details covers
+                        which platform the experience is built on. -->
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Platform:</div>                                                <div class="experienceRightEdgeText rightEdgeText">WebGL/Multi-Platform VR/ Mobile</div> </div>                                        
+                        
+                        <!-- The second highlights the roles played on the
+                        the experience. -->
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Roles:</div> 
+                                                                   <div class="experienceRightEdgeText rightEdgeText">Experience Designer/ Programmer/ Artist</div> </div>
+                    </div>
+
+                    <div class="experienceTextContainer basicSiteText">
+
+                        <hr class="experienceTitleBar">
+
+                        <div class="experienceText experienceTitle siteStdBoldedText"> State of Being (2015): </div>
+
+                        <hr class="experienceTitleBar">
+
+                        <div class="experienceText"> A VR Puzzle Adventure Game created as a thesis project expressing the issues of early VR systems
+                            with suggested solutions for designing around them, resulting in a masters degree. </div>                                                                      
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Platform:</div>                                                                <div class="experienceRightEdgeText rightEdgeText">Oculus Rift DK2</div> </div>                                           
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Roles:</div>     <div class="experienceRightEdgeText rightEdgeText">Experience Designer/ Programmer/ Artist</div> </div> 
+                    
+                    </div>
+
+                    <div class="experienceTextContainer basicSiteText">
+                        
+                        <hr class="experienceTitleBar">
+                        
+                        <div class="experienceText experienceTitle siteStdBoldedText"> Sneaker Hacker/ Heist (2014): </div>
+                        
+                        <hr class="experienceTitleBar">                      
+                        
+                        <div class="experienceText"> Multi-Perspective Online Co-op Game attempting to have a player acting out a heist in VR while
+                            the partnered player guides the heist via pc mode. Created as a college collaborative project. </div>                                      
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Platform:</div>                                                                 <div class="experienceRightEdgeText rightEdgeText">Oculus Rift DK1</div> </div>                                                                
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Roles:</div>                                           <div class="experienceRightEdgeText rightEdgeText">VR Char Controller Designer & Programmer</div> </div> 
+                    
+                    </div>
+
+                    <div class="experienceTextContainer basicSiteText">
+                       
+                        <hr class="experienceTitleBar">
+
+                        <div class="experienceText experienceTitle siteStdBoldedText"> The Haunted – A Game of Hide and Seek (2014): </div>
+                       
+                        <hr class="experienceTitleBar">                      
+                        
+                        <div class="experienceText"> Multiplayer Online VR Game simulating a spookie version of a childhood classic game of hide and
+                            seek. Created as a college collaborative project. </div>                                            
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Platform:</div>                                                                  <div class="experienceRightEdgeText rightEdgeText">Oculus Rift DK1</div> </div>                                
+                        
+                        <div class="experienceText experienceDetails"> <div class="experienceDetailsLeft">Roles:</div>                                                 <div class="experienceRightEdgeText rightEdgeText">Mechanics & UI Designer/ Programmer</div> </div>  
+                   
                     </div>
 
                 </div>
 
-                <!-- Here the toggle button for the extended display
-                is placed at the base of the display container. -->
-                <div class="previewExtentedDisplayToggleBlock">
+            </div>
 
-                    <!-- Container that holds the toggle button and 
-                    arrow image that overlays it. -->
-                    <div>
+        </div>
 
-                        <!-- The arrow image that will overlay the
-                        toggle button below. -->
+        <div class="sectionTitleContainer">
+                <h5 class="sectionTitle">EDUCATION</h5>
+        </div>
+        
+        <div class="basicContentBlock" id="resumeEducationBlock">
 
-                        <!-- This is the actual toggle button that opens and closes the extended 
-                        summary displays by calling the DisplayExtendedSummaryBehavior.js and
-                        sending in an ID to identify which extended display to open or close.-->
-                        <button class="previewExtentedDisplayContainerToggle" onclick="ToggleDisplayExtendedSummaryWindow ('Project1')"></button>
+            <div class="basicContentContainer">
+
+                <div class="basicSiteText">
+
+                    <!-- In the final section of the resume there are sub
+                    containers to hold education degrees and the pieces of
+                    information that detail them. -->
+                    <div class="educationDescriptionContainer">
+
+                        <!-- The first line of detail handles the type of degree, 
+                        specific name of the degree, and when it was recieved. -->
+                        <div> <div class="creditTitle siteStdBoldedText resumeTitling"> Masters of Fine Arts: </div>  <div class="eduDegreeTitle"> Game Development </div> <div class="rightEdgeText"> December 2015 </div> </div>
+                        
+                        <!-- The second line details the school the degree was
+                        completed at, and where the school was located then. -->
+                        <div> <div class="creditTitle"> Academy of Art University </div> <div class="rightEdgeText"> San Francisco, CA </div> </div>
+                    
+                    </div>
+
+                    <div class="educationDescriptionContainer">
+                        
+                        <div> <div class="creditTitle siteStdBoldedText resumeTitling"> Bachelors of Science: </div>  <div class="eduDegreeTitle"> Game Art and Design </div> <div class="rightEdgeText"> July 2012 </div> </div>
+                        
+                        <div> <div class="creditTitle"> Westwood College Online </div> <div class="rightEdgeText"> Denver, CO </div> </div>
                     
                     </div>
 
@@ -327,31 +425,12 @@ above this pages closing 'body' tag. -->
 
             </div>
 
-            <!-- The extended display block that goes with each of the project previews.
-            This will be the element that opens and closes. -->
-            <div class= "previewSectionDisplayExtendedContainer" id= "sectionDisplayExtendedWindow_Experiences_Project1">
-
-                <!-- This is that container that holds all the content that will fade in and out
-                as the extended display window opens and closes. -->
-                <div class= "previewSectionDisplayExtendedContent" id= "sectionDisplayExtendedContent_Experiences_Project1">
-
-                    <!-- As a piece of the extended project summary, 
-                    this will be the text based description. -->
-                    <p class="previewDisplayBasicDescriptionText basicSiteText">Games are so much more than a way of having fun, as virtual reality is so much more 
-                        than a means of playing games. They are multidimensional frameworks for both the construction and observation of experiences. For what are WE but
-                        the sum of our unique experiences broken down and 
-                    </p>
-
-                </div>
-
-            </div>
-
         </div>
 
+    </div>
 
 
-
-        <!-- *************************************************************************************************** -->
+         <!-- *************************************************************************************************** -->
                 <!-- ************************************************************************************ -->
                                         <!-- ****** FOOTER CONTENT ****** -->
                 <!-- ************************************************************************************ -->
@@ -367,7 +446,7 @@ above this pages closing 'body' tag. -->
 
     <!-- Container holds all content that will be 
     fixed to the bottom of all related pages!! -->
-    <footer>
+    <footer class="footerContainer">
 
                 <!-- ************************************************************************************ -->
                                         <!-- ****** NAV BUTTON DISPLAY ****** -->
@@ -409,7 +488,7 @@ above this pages closing 'body' tag. -->
             <div class="footerDisplayButtonSpacer"></div>
 
             <!-- Pro-doc navigation button 1 will take the viewer to the resume page. -->
-            <a class="basicSiteBtn_Theme smallBtn navButton_Footer" href= "resume.html">RESUME</a>
+            <a class="basicSiteBtn_Greyed smallBtn navButton_Footer">RESUME</a>
             <!-- Pro-doc navigation button 2 will take the viewer to the biography page. -->
             <a class="basicSiteBtn_Theme navButton_Footer" href= "bio.html">BIO</a>
             <!-- Pro-doc navigation button 3 will take the viewer to the contact page found on the old wix site. This will
