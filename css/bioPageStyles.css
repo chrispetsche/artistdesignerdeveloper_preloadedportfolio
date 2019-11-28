@@ -15,23 +15,7 @@ overrides some elements given by the basic site styles.
                                 /* In this first portion of the bio styling, the bio specific
 				elements are addressed. */
 
-/* Sets the position and scaling attributes for
-main bio picture found at the top of the page. */
-.bioPictureContainer {
-    border-bottom: 1px solid white;
-    border-left: 3px solid white;
-    border-right: 3px solid white;
-    border-top: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.63);
-    display: block;
-    left: 0;
-    margin: 0 auto 40px auto; 
-    max-width: 700px;
-    padding: 5px;
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
+
 
 /* Bio pic stuff goes here!!! */
 
