@@ -33,22 +33,7 @@ main bio picture found at the top of the page. */
     top: 5px;
 }
 
-/* The attributes that style the main bio
-picture and cause all the other page elements
-around it to curve to its form. */
-.bioPicture {
-    border: 2px solid rgba(255, 255, 255, 0.411);
-    border-radius: 50%;
-    box-shadow: 0 3px 8px 6px rgba(255, 255, 255, 0.137), 0 10px 24px 0 rgba(0, 0, 0, 0.137);
-    display: block;
-    float: right;
-    margin: 15px;
-    padding: 0;
-    shape-outside: ellipse();
-    shape-image-threshold: 1;
-    shape-margin: 0;
-    width: 35%;
-}
+/* Bio pic stuff goes here!!! */
 
 /* Sets the basic structure for the bio
 page text layout. */
