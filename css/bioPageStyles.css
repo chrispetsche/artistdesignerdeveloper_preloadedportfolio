@@ -15,9 +15,40 @@ overrides some elements given by the basic site styles.
                                 /* In this first portion of the bio styling, the bio specific
 				elements are addressed. */
 
+/* Sets the position and scaling attributes for
+main bio picture found at the top of the page. */
+.bioPictureContainer {
+    border-bottom: 1px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-top: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.63);
+    display: block;
+    left: 0;
+    margin: 0 auto 40px auto; 
+    max-width: 700px;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
 
-
-/* Bio pic stuff goes here!!! */
+/* The attributes that style the main bio
+picture and cause all the other page elements
+around it to curve to its form. */
+.bioPicture {
+    border: 2px solid rgba(255, 255, 255, 0.411);
+    border-radius: 50%;
+    box-shadow: 0 3px 8px 6px rgba(255, 255, 255, 0.137), 0 10px 24px 0 rgba(0, 0, 0, 0.137);
+    display: block;
+    float: right;
+    margin: 15px;
+    padding: 0;
+    shape-outside: ellipse();
+    shape-image-threshold: 1;
+    shape-margin: 0;
+    width: 35%;
+}
 
 /* Sets the basic structure for the bio
 page text layout. */
